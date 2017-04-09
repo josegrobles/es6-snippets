@@ -54,3 +54,9 @@ console.log(m,n); // 20,10
   console.log(a,b,c,d) // 1 2 3 12
   console.log(x,y,z,w) // 4 6 9 20
 }
+
+// Default Value Assignment combined with alternate assignmment expression
+{
+  let {x,y,z,w: WW = 20} = bar()
+  console.log(x,y,z,WW) //4,6,9,20
+}
