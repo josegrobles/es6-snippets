@@ -46,3 +46,11 @@ console.log(m,n); // 20,10
   let {x,z} = bar()
   console.log(b,x,z) // 2,4,9
 }
+
+//Default Value Assignment
+{
+  let [a = 3, b = 6, c = 9 , d = 12] = foo()
+  let {x = 5, y = 10, z = 15, w = 20} = bar()
+  console.log(a,b,c,d) // 1 2 3 12
+  console.log(x,y,z,w) // 4 6 9 20
+}
