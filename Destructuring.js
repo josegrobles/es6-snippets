@@ -71,3 +71,16 @@ console.log(m,n); // 20,10
 
   var { model: { User } } = App; // Instead of: var user = App.model.User
 }
+
+//Destructuring Parameters + Parameters Defaults
+{
+  let f6 = ({x = 10} = {}, {y} = {y: 10}) => {
+    console.log(x,y)
+  }
+  f6() // 10 10
+  f6({},{}) //10 undefined
+  f6(undefined,undefined) // 10 10
+  f6({},undefined) //10 10
+
+  f6({x:2},{y:7}) // 2 7
+}
