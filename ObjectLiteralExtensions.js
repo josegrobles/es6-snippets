@@ -13,3 +13,16 @@
   }
   console.log(o) // { x: [Function: x], y: [Function: y] }
 }
+
+//Getter and Setter
+{
+  let o = {
+    __id : 10,
+    get id() { return this.__id++},
+    set id(v) { this.__id = v}
+  }
+  console.log(o.id) //10
+  console.log(o.id) //11
+  console.log(o.__id) //12
+  console.log(o.__id) //12
+}
