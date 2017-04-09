@@ -60,3 +60,14 @@ console.log(m,n); // 20,10
   let {x,y,z,w: WW = 20} = bar()
   console.log(x,y,z,WW) //4,6,9,20
 }
+
+//Nested Destructuring
+{
+  let App = {
+    model: {
+      User : function() {}
+    }
+  };
+
+  var { model: { User } } = App; // Instead of: var user = App.model.User
+}
