@@ -31,12 +31,18 @@ var n = 20;
 [n,m] = [m,n];
 console.log(m,n); // 20,10
 
-//destructuring Assignment Expressions
-
+//Destructuring Assignment Expressions
 {
   let o = {a:1,b:2,c:3},
     a,b,c,p;
   p = {a,b,c} = o
   console.log(a,b,c,p) // 1 2 3 { a: 1, b: 2, c: 3 }
   console.log(p === o ) //true
+}
+
+//Discarding values
+{
+  let [,b] = foo()
+  let {x,z} = bar()
+  console.log(b,x,z) // 2,4,9
 }
