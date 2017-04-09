@@ -25,8 +25,18 @@ let bar = () => {
   console.log(A,B,C) //4,6,9
 }
 
-//Swapping variables the easy way. It doesn't work so it is not that easy apparently
-var m = 10
-var n = 20
-[n,m] = [m,n]
-console.log(m,n) // 20,10
+//Swapping variables the easy way. (Semicolons are important it seems)
+var m = 10;
+var n = 20;
+[n,m] = [m,n];
+console.log(m,n); // 20,10
+
+//destructuring Assignment Expressions
+
+{
+  let o = {a:1,b:2,c:3},
+    a,b,c,p;
+  p = {a,b,c} = o
+  console.log(a,b,c,p) // 1 2 3 { a: 1, b: 2, c: 3 }
+  console.log(p === o ) //true
+}
